@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+// square a number
+
+//can also use double on code interchangeable with int.
+int square(int num){
+    int result = num * num;
+    
+    return result;
+    //or can use return num * num; for a shorter code.
+}
+
+int main() {
+    
+    int x = square(2);
+    int y = square(3);
+    int z = square(4);
+    
+    printf("%d", x);
+    printf("%d", y);
+    printf("%d", z);
+    
+    return 0;
+}
+
+// cube a number
+
+#include <stdio.h>
+
+
+double cube(double num){
+    return num * num * num;
+}
+
+int main() {
+    
+    double x = cube(2);
+    double y = cube(3);
+    double z = cube(4);
+    
+    printf("%lf\n", x);
+    printf("%lf\n", y);
+    printf("%lf\n", z);
+    
+    return 0;
+}
