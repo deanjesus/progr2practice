@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-//functions practice example
+#include <string.h>
 
 void happy(char name[], int age){
     printf("\nHappy Birthday to you");
@@ -8,17 +7,25 @@ printf("\nHappy Birthday to you");
 printf("\nHappy Birthday to you");
 printf("\nHappy Birthday to %s", name);
 printf("\nHappy Birthday to you");
-printf("\nHappy Birthday you are %s", age);
+printf("\nHappy Birthday you are %d", age);
 }
 
 int main() {
 
-char name[] = "bro";
-int age = 25;
+char name[50] = "";
+int age = 0;
+
+printf("Enter your name: ");
+fgets(name, sizeof(name), stdin);
+name[strlen(name) - 1] = '\0';
+
+printf("Enter your age: ");
+scanf("%d", &age);
 
 happy(name, age);
 happy(name, age);
 happy(name, age);
 
+return 0;
 
 }
