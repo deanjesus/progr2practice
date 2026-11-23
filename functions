@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+//functions practice example
+
+void happy(char name[], int age){
+    printf("\nHappy Birthday to you");
+printf("\nHappy Birthday to you");
+printf("\nHappy Birthday to you");
+printf("\nHappy Birthday to %s", name);
+printf("\nHappy Birthday to you");
+printf("\nHappy Birthday you are %s", age);
+}
+
+int main() {
+
+char name[] = "bro";
+int age = 25;
+
+happy(name, age);
+happy(name, age);
+happy(name, age);
+
+
+}
