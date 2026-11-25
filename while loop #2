@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    
+bool run = true;
+char reply = '\0';
+
+while(run){
+    printf("Welcome\n");
+    printf("Enter: ");
+    scanf(" %c", &reply);
+    
+    if(reply != 'Y' && reply != 'y'){
+        run = false;
+    }
+}
+
+printf("You exit");
+
+return 0;
+}
