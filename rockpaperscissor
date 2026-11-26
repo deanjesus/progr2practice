@@ -9,7 +9,7 @@ void checkwinner(int user, int computer);
 int main () {
     
     
-    srand(time(NULL));
+    srand(time(NULL)); //shuffles numbers for you
     
     printf("rock paper scissors \n");
     
@@ -61,9 +61,10 @@ int getuser(){
     }while(computer1 < 1 || computer1 > 3);
     
     
-    return computer1;
+    return computer1; // needed to return to main. return scanf
 }
-void checkwinner(int user, int computer){
+void checkwinner(int user, int computer){ 
+// use void when you dont need to give back DATA. Only use when only needing to display.
     
     if(user == computer){
         
