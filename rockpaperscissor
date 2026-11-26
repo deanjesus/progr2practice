@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int getcomputer();
+int getuser();
+void checkwinner(int user, int computer);
+
+int main () {
+    
+    
+    srand(time(NULL));
+    
+    printf("rock paper scissors \n");
+    
+    int user = getuser();
+    int computer = getcomputer();
+    
+    switch(user){
+        case 1:
+        printf("Player: ROCK\n");
+        break;
+        case 2:
+        printf("Player: Paper\n");
+        break;
+        case 3:
+        printf("Player: Scissor\n");
+        break;
+    }
+  switch(computer){
+        case 1:
+        printf("Computer ROCK\n");
+        break;
+        case 2:
+        printf("Computer Paper\n");
+        break;
+        case 3:
+        printf("Computer Scissor\n");
+        break;
+    }
+  
+  checkwinner(user, computer);
+  
+    return 0;
+}
+
+int getcomputer(){
+    return (rand() % 3) + 1;
+}
+int getuser(){
+    
+    int computer1 = 0;
+    
+    do{
+        printf("choose an option\n");
+        printf("1 rock\n");
+        printf("2 paper\n");
+        printf("3 scissor\n");
+        printf("Enter choice: ");
+        scanf("%d", &computer1);
+    }while(computer1 < 1 || computer1 > 3);
+    
+    
+    return computer1;
+}
+void checkwinner(int user, int computer){
+    
+    if(user == computer){
+        
+        printf("Its a tie");
+    }else if(user == 1 && computer == 3){
+        printf("You Win");
+    }else if(user == 2 && computer == 1){
+        printf("You Win");
+    }else if(user == 3 && computer == 2){
+        printf("You Win");
+    }else{
+        printf("You Lose");
+    }
+    
+    
+}
